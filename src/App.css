@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,body {
+  overflow-x: hidden;
+}
+
+.homepage_bg{
+  background-image: url("../src/assets/Images/bghome.svg");
+  /* background-repeat: no-repeat; */
+}
+
+.spinner {    
+  --r1: 154%;
+  --r2: 68.5%;
+  width:60px;
+  height:60px;
+  border-radius: 50%; 
+  background:
+    radial-gradient(var(--r1) var(--r2) at top   ,#0000 79.5%,#766DF4 80%),
+    radial-gradient(var(--r1) var(--r2) at bottom,#766DF4 79.5%,#0000 80%),
+    radial-gradient(var(--r1) var(--r2) at top   ,#0000 79.5%,#766DF4 80%),
+    #E4E4ED;
+  background-size: 50.5% 220%;
+  background-position: -100% 0%,0% 0%,100% 0%;
+  background-repeat:no-repeat;
+  animation:p9 2s infinite linear;
+}
+@keyframes p9 {
+    33%  {background-position:    0% 33% ,100% 33% ,200% 33% }
+    66%  {background-position: -100%  66%,0%   66% ,100% 66% }
+    100% {background-position:    0% 100%,100% 100%,200% 100%}
+}
+
+@keyframes ct1 {
+  0% {background-position: right}
+}
+
+.blackButton {
+  @apply cursor-pointer rounded-md bg-richblack-800 px-[20px] py-[8px] font-semibold text-richblack-5;
+}
+.lable-style {
+  @apply text-[14px] text-richblack-5;
+}
+.form-style {
+  @apply rounded-lg bg-richblack-700 p-3 text-[16px] leading-[24px] text-richblack-5 shadow-[0_1px_0_0] shadow-white/50 placeholder:text-richblack-400 focus:outline-none;
+}
+.section_heading {
+  @apply text-2xl font-bold text-richblack-5 lg:text-4xl;
+}
+
+.error{
+  background-image: url("../src/assets/404/error-404-concept-landing-page/404.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.section_heading {
+  @apply text-2xl font-bold text-richblack-5 lg:text-4xl;
+}
+
+.yellowButton {
+  @apply cursor-pointer rounded-md bg-yellow-50 px-[20px] py-[8px] font-semibold text-richblack-900;
+}
+
+.useme{
+  background: #85F7FF;
+background: linear-gradient(to right, #85F7FF 0%, #F8FFC9 100%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+
+}
